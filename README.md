@@ -8,7 +8,7 @@ https://www.youtube.com/watch?v=Yqur47HdKd8&t=192s
 
 If you got an Error like this:
 
-'
+```
 Traceback (most recent call last):
   File "yt_downloader.py", line 9, in <module>
     ytd = YouTube(url)
@@ -21,7 +21,9 @@ Traceback (most recent call last):
   File "C:\Users\marku\anaconda3\envs\py_yt_dl\lib\site-packages\pytube\extract.py", line 301, in <listcomp>
     parse_qs(formats[i]["cipher"]) for i, data in enumerate(formats)
 KeyError: 'cipher'
-'
+```
 
-Use this fix: https://stackoverflow.com/questions/62098925/why-my-youtube-video-downloader-only-downloads-some-videos-and-for-other-videos
+[Use this fix from StackOverflow  ](https://stackoverflow.com/questions/62098925/why-my-youtube-video-downloader-only-downloads-some-videos-and-for-other-videos)
+
+
 
