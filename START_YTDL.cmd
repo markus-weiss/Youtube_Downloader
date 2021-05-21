@@ -33,7 +33,7 @@ IF /I "%shouldConvertToMp3%" NEQ "Y" GOTO :startMp3Convert
 
 
 :startMp3Convert
-ECHO noot
+ECHO Not implemented Error
 GOTO start
 :end
 
