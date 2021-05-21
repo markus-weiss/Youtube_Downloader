@@ -20,8 +20,23 @@ call activate ytdl
 ECHO [1;93m  Please wait a moment... [0m 
 python ./YTDL_ProgramFiles/ytdl.py %_inputname%
 ECHO [1;93m  Finish, look into your folder! [0m     
-GOTO :start
+
+
 :end
+
+
+:WantToConvert
+setlocal
+SET /P shouldConvertToMp3= [0;93m Do you want to convert to mp3 (Y/N)?: [0m 
+IF /I "%shouldConvertToMp3%" NEQ "Y" GOTO :startMp3Convert
+:end
+
+
+:startMp3Convert
+ECHO noot
+GOTO start
+:end
+
 
 REM cmd /k
 REM pip install pytube3 --upgrade
