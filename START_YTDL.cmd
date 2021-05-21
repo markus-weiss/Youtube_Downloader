@@ -12,16 +12,16 @@ if errorlevel 1 (GOTO :wrongInput) else (GOTO :startYoutubeDownloader)
 :wrongInput
 ECHO [101;93m  This can't be a youtube link! [0m 
 GOTO start
-:end	
-
-
-:startYoutubeDownloader
-call activate ytdl 
-python ytdl.py %_inputname%
-GOTO :start
-
 :end
 
+:startYoutubeDownloader
+ECHO %_inputname% > ./YTDL_ProgramFiles/listofYoutubeLinks.txt
+call activate ytdl 
+ECHO [1;93m  Please wait a moment... [0m 
+python ./YTDL_ProgramFiles/ytdl.py %_inputname%
+ECHO [1;93m  Finish, look into your folder! [0m     
+GOTO :start
+:end
 
 REM cmd /k
 REM pip install pytube3 --upgrade
@@ -51,7 +51,3 @@ REM @ECHO OFF
 REM ECHO %~dp0
 REM ECHO %~dp0..\
 REM FOR %%A IN ("%~dp0.") DO ECHO %%~dpA
-
-
-
-
